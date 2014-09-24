@@ -1,5 +1,5 @@
+loadkeys la-latin1
 dhcpcd
-
 
 # fdisk /dev/sda
 #Seguir pasos en fdisk para crear las siguientes particiones EN ESE ORDEN:
@@ -27,6 +27,6 @@ pacstrap -i /mnt base
 genfstab -U -p /mnt/ >> /mnt/etc/fstab
 
 ## Copiar siguiente script
-cp 2.sh /mnt/home/
+wget https://raw.githubusercontent.com/Evalab-Univalle/sysadmin/master/archlinux/2inside_arch-chroot.sh
+cp 2inside_arch-chroot.sh /mnt/home/
 arch-chroot /mnt /bin/bash
-## Maybe works with arch-chroot /mnt 2.sh
