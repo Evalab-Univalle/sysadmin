@@ -10,8 +10,9 @@ dhcpcd
 
 #Formatear con ext4
 mkfs.ext4 /dev/sda2
-# mkfs.ext4 /dev/sda4 #Tener en cuenta que esta partición es el /home y es compartida por los dos sistemas operativos
+mkfs.ext4 /dev/sda4 #Tener en cuenta que esta partición es el /home y es compartida por los dos sistemas operativos
 mkswap /dev/sda1
+swapon /dev/sda1
 
 #Montar discos para instalar
 mount /dev/sda2 /mnt
@@ -28,5 +29,6 @@ genfstab -U -p /mnt/ >> /mnt/etc/fstab
 
 ## Copiar siguiente script
 wget https://raw.githubusercontent.com/Evalab-Univalle/sysadmin/master/archlinux/2inside_arch-chroot.sh
-cp 2inside_arch-chroot.sh /mnt/home/
+wget https://raw.githubusercontent.com/Evalab-Univalle/sysadmin/master/archlinux/3after-reboot.sh
+cp 2inside_arch-chroot.sh 3after-reboot.sh /mnt/home/
 arch-chroot /mnt /bin/bash
