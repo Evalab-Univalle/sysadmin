@@ -7,6 +7,7 @@ timedatectl status
 ## pacman -S ntp
 ## ntpd -q
 
+MULTILIB=`grep -n "\[multilib\]" /etc/pacman.conf | cut -f1 -d:`
 sed -i "${MULTILIB}s/^#//" /etc/pacman.conf
 pacman -Sy
 
