@@ -68,4 +68,6 @@ system_ctl enable lightdm
 pacman -S cinnamon
 pacman -S gnome gnome-extra gnome-tweak-tool gnome-power-manager network-manager-applet
 pacman -S kdesdk-kate kdegraphics-ksnapshot kdegraphics-okular kdeutils-ark kdebase kdebase-workspace yakuake ttf-dejavu ttf-liberation kdemultimedia-kmix k3b kdeplasma-applets-plasma-nm
-pacman -S eclipse meld git libreoffice libreoffice-es texlive-most virtualbox virtualbox-host-modules lyx 
+pacman -S eclipse meld git libreoffice libreoffice-es texlive-most virtualbox virtualbox-host-modules lyx
+
+echo "ejecuta: hostnamectl set-hostname eva0#, y arregla el hostname"
