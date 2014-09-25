@@ -12,7 +12,7 @@ hwclock --systohc --utc
 echo "KEYMAP=la-latin1" > /etc/vconsole.conf
 
 ## Red
-pacman -S networkmanager
+pacman -S networkmanager dnsmasq
 systemctl enable NetworkManager.service
 
 ## Create an initial ramdisk environment ( TODO: Confirm this is not necessary)
@@ -24,7 +24,7 @@ grub-install --target=i386-pc --recheck /dev/sdb
 grub-mkconfig -o /boot/grub/grub.cfg
 
 ## Cambiar password del root
-echo "Change root password with passwd"
+echo "Cambiar password del root con passwd"
 passwd
 
-echo "exit for leave chroot, umount -R /mnt/ , and reboot"
+echo "Ctrl+D para salir de chroot, umount -R /mnt/ , y reinicia"
