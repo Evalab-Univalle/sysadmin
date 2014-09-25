@@ -8,6 +8,7 @@ timedatectl status
 ## ntpd -q
 
 sed -i "${MULTILIB}s/^#//" /etc/pacman.conf
+pacman -Sy
 
 ## Create user
 # useradd eva -m
@@ -16,7 +17,7 @@ sed -i "${MULTILIB}s/^#//" /etc/pacman.conf
 # passwd eva
 
 ## Basic, X server, sound
-pacman -S mesa xorg-server xorg-xinit alsa-utils pulseaudio pulseaudio-alsa vim ntfs-3g openssh
+pacman -S mesa xorg-server xorg-xinit alsa-utils pulseaudio pulseaudio-alsa vim ntfs-3g openssh wget
 
 systemctl enable sshd.service
 systemctl enable systemd-readahead-collect
