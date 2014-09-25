@@ -20,7 +20,7 @@ mkinitcpio -p linux
 
 ## Instalar grub
 pacman -S grub os-prober
-grub-install --target=i386-pc --recheck /dev/sdb
+grub-install --target=i386-pc --recheck /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
 ## Cambiar password del root

@@ -8,10 +8,11 @@ Para un script más genral ver [AUI]. Para un script más personalizado, para el
 ##1prepare_and_base-system.sh
 Preparación del ambiente para instalar (dar internet al instalador, particionar discos, etc.) e instalar sistema base. *Hay pasos aquí que no se pueden automatizar*. Una vez dentro del instalador se puede descargar este archivo con: ```wget https://raw.githubusercontent.com/Evalab-Univalle/sysadmin/master/archlinux/1prepare_and_base-system.sh```
 
-##2inside_arch-chrrot.sh
+##2inside_arch-chroot.sh
+Grub, internet y demás cosas básicas para poder terminar la instalación sin cd
 
-
-3after-reboot.sh =>
+##3after-reboot.sh =>
+Instalación de los demás programas y entornos gráficos para que se pueda trabajar EN GENERAL en evalab.
 
 [AUI]:https://github.com/helmuthdu/aui
 [dotfiles]:https://github.com/AndresRicardoTorres/dotfiles

@@ -15,10 +15,10 @@ sed -i "${MULTILIB}s/^#//" /etc/pacman.conf
 pacman -Sy
 
 ## Create user
-# useradd eva -m
+useradd eva -m
 # usermod -aG wheel eva
-# echo "Cambiar password para la cuenta eva"
-# passwd eva
+echo "Cambiar password para la cuenta eva"
+passwd eva
 
 ## Basic, X server, sound
 pacman -S mesa xorg-server xorg-xinit alsa-utils pulseaudio pulseaudio-alsa vim ntfs-3g openssh wget
@@ -61,9 +61,9 @@ yaourt -S google-talkplugin
 
 sed -i '/%wheel ALL=(ALL) ALL/s/^#//' /etc/sudoers
 
-pacman -S lightdm lightdm-kde-greeter lightdm-gtk3-greeter
+pacman -S kdm
 
-system_ctl enable lightdm
+systemctl enable lightdm
 
 pacman -S cinnamon
 pacman -S gnome gnome-extra gnome-tweak-tool gnome-power-manager network-manager-applet
