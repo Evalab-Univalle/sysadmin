@@ -38,7 +38,7 @@ pacman -S nvidia
 pacman -S htop bash-completion zip unzip unrar zsh bc avahi nss-mdns dosfstools terminator
 
 systemctl enable avahi-daemon.service
-
+sed -i 's/hosts: files dns myhostname/hosts: files myhostname mdns_minimal [NOTFOUND=return] dns/g' /etc/nsswitch.conf
 ## Web
 pacman -S firefox chromium flashplugin
 
