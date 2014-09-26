@@ -63,7 +63,7 @@ sed -i '/%wheel ALL=(ALL) ALL/s/^#//' /etc/sudoers
 
 pacman -S kdm
 
-systemctl enable lightdm
+systemctl enable kdm.service
 
 pacman -S cinnamon
 pacman -S gnome gnome-extra gnome-tweak-tool gnome-power-manager network-manager-applet
