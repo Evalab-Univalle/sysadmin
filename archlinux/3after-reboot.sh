@@ -26,6 +26,7 @@ pacman -S mesa xorg-server xorg-xinit alsa-utils pulseaudio pulseaudio-alsa vim 
 systemctl enable sshd.service
 systemctl enable systemd-readahead-collect
 systemctl enable systemd-readahead-replay
+localectl set-x11-keymap es sundeadkeys
 
 ## [Optional] Intel graphics driver
 pacman -S nvidia
