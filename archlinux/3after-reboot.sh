@@ -19,6 +19,8 @@ useradd eva -m
 # usermod -aG wheel eva
 echo "Cambiar password para la cuenta eva"
 passwd eva
+#Cambiar información de usuario eva
+#chfn eva
 
 ## Basic, X server, sound
 pacman -S mesa xorg-server xorg-xinit alsa-utils pulseaudio pulseaudio-alsa vim ntfs-3g openssh wget
