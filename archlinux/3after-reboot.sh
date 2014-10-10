@@ -19,7 +19,7 @@ useradd eva -m
 # usermod -aG wheel eva
 echo "Cambiar password para la cuenta eva"
 passwd eva
-#Cambiar información de usuario eva
+#Cambiar informaciÃ³n de usuario eva
 #chfn eva
 
 ## Basic, X server, sound
@@ -67,7 +67,7 @@ sed -i '/%wheel ALL=(ALL) ALL/s/^#//' /etc/sudoers
 pacman -S cinnamon
 pacman -S gnome gnome-extra gnome-tweak-tool gnome-power-manager network-manager-applet
 pacman -S kdesdk-kate kdegraphics-ksnapshot kdegraphics-okular kdeutils-ark kdebase kdebase-workspace yakuake ttf-dejavu ttf-liberation kdemultimedia-kmix k3b kdeplasma-applets-plasma-nm
-pacman -S eclipse meld git libreoffice libreoffice-es texlive-most virtualbox virtualbox-host-modules lyx
+pacman -S eclipse meld git libreoffice libreoffice-es texlive-most virtualbox virtualbox-host-modules lyx texmaker
 
 systemctl enable gdm.service
 
